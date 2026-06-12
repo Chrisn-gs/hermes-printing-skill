@@ -2,6 +2,26 @@
 
 从终端打印 Markdown 文件的 Hermes Agent skill。支持网络打印机管理、Markdown → PDF 渲染、字体选择、页数控制。
 
+## 使用场景
+
+### 设备环境
+
+- **Mac mini M2** 24 小时不关机，作为家庭服务器
+- **HP LaserJet 115w** 黑白激光打印机，网络连接（IPP）
+- 通过 **Hermes Agent** 统一管理打印任务
+
+### 交互方式
+
+Hermes 是一个 AI Agent 框架，支持多种交互入口，打印可以通过以下任意方式触发：
+
+| 方式 | 示例 |
+|------|------|
+| **终端 CLI** | 在 tmux 里直接跟 Hermes 说"帮我打印这个文件" |
+| **Telegram** | 在 TG 里发消息给 Hermes bot，远程触发打印 |
+| **GUI（TUI/Web）** | Hermes 的 Ink TUI 或 Web Dashboard |
+
+典型流程：用户在 Telegram 发一条"打印 07Test/xxx.md"，Hermes 在 Mac mini 上渲染 PDF 并发送到打印机，回到家纸已经打好了。
+
 ## 功能
 
 - 🖨️ 网络打印机管理（添加、删除、状态查看）
